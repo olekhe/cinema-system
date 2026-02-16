@@ -1,0 +1,61 @@
+# .dockerignore for Cinema.Showtimes
+# Keep the Docker build context small by excluding build artifacts, editor files, and secrets.
+
+# Build outputs
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Publish / artifacts
+publish/
+artifacts/
+
+# Visual Studio / IDE
+.vs/
+.vscode/
+.idea/
+*.sln.cache
+
+# User files / OS
+*.user
+*.suo
+*.userosscache
+*.userprefs
+Thumbs.db
+Desktop.ini
+
+# Git
+.git
+.gitignore
+
+# NuGet / packages
+*.nupkg
+packages/
+.nuget/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+
+# Logs / temporary
+*.log
+*.pid
+tmp/
+
+# Development config / secrets (do not exclude appsettings.json if your runtime needs it)
+appsettings.Development.json
+secrets.json
+.secret
+
+# Docker tooling files (exclude compose or local-only overrides)
+.dockerignore
+docker-compose*.yml
+
+# Node / frontend
+node_modules/
+npm-debug.log
+
+# Ensure your Dockerfile and required source files are NOT excluded
+# (Do NOT add `docker/` or `Dockerfile` here unless you intend to exclude them.)
