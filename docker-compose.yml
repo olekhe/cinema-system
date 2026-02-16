@@ -8,7 +8,7 @@ services:
   moviecatalog:
     build:
       context: ./services/catalog-service
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     image: cinema.moviecatalog:latest
     ports:
       - "5001:80"
