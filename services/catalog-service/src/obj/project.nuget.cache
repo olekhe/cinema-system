@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/HdrxMpoJ6Y=",
+  "dgSpecHash": "IWxQ748Fgqc=",
   "success": true,
-  "projectFilePath": "C:\\Dev\\CloudNative\\Cinema\\Cinema.MovieCatalog\\Cinema.MovieCatalog.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Dev\\CloudNative\\CinemaSystem\\services\\catalog-service\\src\\Cinema.MovieCatalog.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fnkta\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
+    "C:\\Users\\fnkta\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,11 +1,76 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Microsoft.AspNetCore.OpenApi/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.4.3"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.OpenApi/1.4.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.AspNetCore.OpenApi/7.0.0": {
+      "sha512": "P1mkNhZ3IwU3phNLIUkgqVXb1exnooTalIYwpSON3oKKkcRtACDgS4WpO+xnwFw4KzV0bmgkUqB3acXxIefvvg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/1.4.3": {
+      "sha512": "rURwggB+QZYcSVbDr7HSdhw/FELvMlriW10OeOzjPT7pstefMo7IThhtNtDudxbXhW+lj0NfX72Ka5EDsG8x6w==",
+      "type": "package",
+      "path": "microsoft.openapi/1.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.4.3.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Microsoft.AspNetCore.OpenApi >= 7.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\fnkta\\.nuget\\packages\\": {},
@@ -14,11 +79,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\CloudNative\\Cinema\\Cinema.Booking\\Cinema.Booking.csproj",
+      "projectUniqueName": "C:\\Dev\\CloudNative\\CinemaSystem\\services\\booking-service\\src\\Cinema.Booking.csproj",
       "projectName": "Cinema.Booking",
-      "projectPath": "C:\\Dev\\CloudNative\\Cinema\\Cinema.Booking\\Cinema.Booking.csproj",
+      "projectPath": "C:\\Dev\\CloudNative\\CinemaSystem\\services\\booking-service\\src\\Cinema.Booking.csproj",
       "packagesPath": "C:\\Users\\fnkta\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\CloudNative\\Cinema\\Cinema.Booking\\obj\\",
+      "outputPath": "C:\\Dev\\CloudNative\\CinemaSystem\\services\\booking-service\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +121,12 @@
     "frameworks": {
       "net10.0": {
         "targetAlias": "net10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

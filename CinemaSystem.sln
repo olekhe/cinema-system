@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{5854FF58-B8C5-05C6-5BF2-ACE42193F22B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "booking-service", "booking-service", "{CC5D28CF-3C75-C13E-40D5-B8349E0FD479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4E837F21-A045-0713-F212-7E1E369B0281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Booking", "services\booking-service\src\Cinema.Booking.csproj", "{AF4DD0ED-5A68-F683-75CD-8247F335B5E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "catalog-service", "catalog-service", "{0A4BA796-2639-87B5-8D50-FE6CF0121D9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{51EA18B0-AE3C-1121-8850-0C1CB0C01531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.MovieCatalog", "services\catalog-service\src\Cinema.MovieCatalog.csproj", "{6AD60896-71FE-17F2-2869-FABE5BCF5619}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "showtimes-service", "showtimes-service", "{8517F80D-4E6A-0C5D-9FC2-049E05182BE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BF0FA797-5885-685C-10C3-F65077600DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Showtimes", "services\showtimes-service\src\Cinema.Showtimes.csproj", "{607AD9A1-AED5-8473-1FD7-A9D7F572F37D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF4DD0ED-5A68-F683-75CD-8247F335B5E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4DD0ED-5A68-F683-75CD-8247F335B5E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4DD0ED-5A68-F683-75CD-8247F335B5E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4DD0ED-5A68-F683-75CD-8247F335B5E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD60896-71FE-17F2-2869-FABE5BCF5619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD60896-71FE-17F2-2869-FABE5BCF5619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD60896-71FE-17F2-2869-FABE5BCF5619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD60896-71FE-17F2-2869-FABE5BCF5619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607AD9A1-AED5-8473-1FD7-A9D7F572F37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607AD9A1-AED5-8473-1FD7-A9D7F572F37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607AD9A1-AED5-8473-1FD7-A9D7F572F37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607AD9A1-AED5-8473-1FD7-A9D7F572F37D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC5D28CF-3C75-C13E-40D5-B8349E0FD479} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{4E837F21-A045-0713-F212-7E1E369B0281} = {CC5D28CF-3C75-C13E-40D5-B8349E0FD479}
+		{AF4DD0ED-5A68-F683-75CD-8247F335B5E3} = {4E837F21-A045-0713-F212-7E1E369B0281}
+		{0A4BA796-2639-87B5-8D50-FE6CF0121D9B} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{51EA18B0-AE3C-1121-8850-0C1CB0C01531} = {0A4BA796-2639-87B5-8D50-FE6CF0121D9B}
+		{6AD60896-71FE-17F2-2869-FABE5BCF5619} = {51EA18B0-AE3C-1121-8850-0C1CB0C01531}
+		{8517F80D-4E6A-0C5D-9FC2-049E05182BE2} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{BF0FA797-5885-685C-10C3-F65077600DDD} = {8517F80D-4E6A-0C5D-9FC2-049E05182BE2}
+		{607AD9A1-AED5-8473-1FD7-A9D7F572F37D} = {BF0FA797-5885-685C-10C3-F65077600DDD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F697C709-9990-4B0E-9EE1-BFA3778F0F50}
+	EndGlobalSection
+EndGlobal
