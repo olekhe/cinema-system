@@ -1,0 +1,40 @@
+## Build results
+bin/
+obj/
+out/
+artifacts/
+
+## Visual Studio cache/options
+.vs/
+*.user
+*.suo
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## OS-generated files
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+## Dotnet tools
+.dotnet-tools/
+
+## User-specific files
+*.userprefs
+
+## ASP.NET Core
+wwwroot/lib/
+wwwroot/dist/
+
+## Publish output
+publish/
