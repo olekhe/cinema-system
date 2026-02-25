@@ -21,4 +21,6 @@ kubectl delete service catalog-service -n cinema
 kubectl delete deployment catalog-service -n cinema
 kubectl get endpoints -n cinema
 
+kubectl get events -n cinema --watch
+
 for i in {1..10}; do curl -s http://cinema.local/catalog/movies/1; echo ""; done
