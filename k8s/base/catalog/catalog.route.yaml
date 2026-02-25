@@ -20,5 +20,9 @@ spec:
           type: ReplacePrefixMatch
           replacePrefixMatch: /
     backendRefs:
-    - name: catalog-service
+    - name: catalog-service-v1
       port: 80
+      weight: 90
+    - name: catalog-service-v2
+      port: 80
+      weight: 10

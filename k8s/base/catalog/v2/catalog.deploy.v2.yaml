@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalog-service-v1
+  name: catalog-service-v2
   namespace: cinema
 spec:
-  replicas: 3
+  replicas: 1
   selector:
-    matchLabels:
+    matchLabels: 
       app: catalog-service
-      version: v1
+      version: v2
   template:
     metadata:
       labels:
         app: catalog-service
-        version: v1
+        version: v2
     spec:
       containers:
       - name: catalog-service
-        image: cinema.moviecatalog:v1
+        image: cinema.moviecatalog:v2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80

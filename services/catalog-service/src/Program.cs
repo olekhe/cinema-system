@@ -6,12 +6,15 @@ builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
+// Read version from environment, default to "v1"
+var appVersion = Environment.GetEnvironmentVariable("APP_VERSION") ?? "v1";
+
 // In-memory data store
 var movies = new List<Movie>
 {
-    new(1, "Inception", "Sci-Fi", 2010),
-    new(2, "The Dark Knight", "Action", 2008),
-    new(3, "Interstellar", "Sci-Fi", 2014)
+    new(1, "Inception", "Sci-Fi", 2010, appVersion),
+    new(2, "The Dark Knight", "Action", 2008, appVersion),
+    new(3, "Interstellar", "Sci-Fi", 2014, appVersion)
 };
 
 // CRUD endpoints

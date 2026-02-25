@@ -2,16 +2,29 @@
 # Run: docker compose up --build
 # Stop: docker compose down
 
-version: "3.8"
-
 services:
   moviecatalog:
     build:
       context: ./services/catalog-service
       dockerfile: Dockerfile
-    image: cinema.moviecatalog:latest
+      args:
+        VERSION_ARG: "v1.0.0-Stable"
+    image: cinema.moviecatalog:v1
     ports:
       - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    restart: unless-stopped
+
+  moviecatalog-v2:
+    build:
+      context: ./services/catalog-service
+      dockerfile: Dockerfile
+      args:
+        VERSION_ARG: "v2.0.0-Beta"
+    image: cinema.moviecatalog:v2
+    ports:
+      - "5002:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     restart: unless-stopped
@@ -20,9 +33,9 @@ services:
     build:
       context: ./services/showtimes-service
       dockerfile: Dockerfile
-    image: cinema.showtimes:latest
+    image: cinema.showtimes:v1
     ports:
-      - "5002:80"
+      - "5011:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     restart: unless-stopped
@@ -34,14 +47,14 @@ services:
     build:
       context: ./services/booking-service
       dockerfile: Dockerfile
-    image: cinema.booking:latest
+    image: cinema.booking:v1
     ports:
-      - "5003:80"
+      - "5021:80"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     restart: unless-stopped
 
 # Notes:
-# - Ports map container port 80 to host ports 5001/5002/5003 respectively.
+# - Ports map container port 80 to host ports 5001/5002/5010/5020 respectively.
 # - Change `ASPNETCORE_ENVIRONMENT` to `Production` for production runs.
 # - To run a single service: `docker compose up --build showtimes`

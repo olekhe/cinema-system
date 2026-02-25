@@ -10,6 +10,11 @@ ARG DOTNET_VERSION=10.0
 FROM mcr.microsoft.com/dotnet/aspnet:${DOTNET_VERSION} AS base
 WORKDIR /app
 
+# Define a build argument
+ARG VERSION_ARG=v1
+# Set it as an environment variable so the app can see it
+ENV APP_VERSION=$VERSION_ARG
+
 # Listen on port 80 and enable container-friendly defaults
 ENV ASPNETCORE_URLS="http://+:80" \
     DOTNET_RUNNING_IN_CONTAINER=true \
